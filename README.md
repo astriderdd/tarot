@@ -25,7 +25,7 @@ node --version
 1. **Clone this repository** (if you haven't already):
 
    ```bash
-   git clone <your-repo-url>
+   git clone the url of this repo (see above)
    cd tarot
    ```
 
