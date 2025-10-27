@@ -49,7 +49,7 @@
         - object-cover = scales image to cover the container while maintaining aspect ratio
       -->
       <img src="/src/assets/card-blank.png" alt="Empty card" class="w-full h-64 object-cover" />
-      
+
       <!-- 
         INSTRUCTION TEXT
         ================
@@ -96,7 +96,7 @@
           :alt="selectedCard.name"
           class="w-full h-64 object-fit"
         />
-        
+
         <!-- 
           CARD NAME
           =========
@@ -135,7 +135,7 @@
       <div class="border-t border-purple-900 pt-4">
         <!-- Crystal section label -->
         <p class="text-sm text-white/70 font-semibold text-purple-300 mb-2">Crystal</p>
-        
+
         <!-- Crystal suggestion text -->
         <p class="text-sm text-white/50 italic">{{ selectedCard.crystal_suggestion }}</p>
       </div>
@@ -176,7 +176,7 @@ interface Props {
   // An array of card indexes (0-77) that have already been selected by other Card components
   // This prevents the same card from being selected twice across all three card slots
   cardIdArrayToExclude: number[]
-  
+
   // Whether this card can be clicked (currently not used in our implementation)
   // This could be useful for disabling cards in certain game states
   disabled: boolean
@@ -226,7 +226,7 @@ const selectedCardIndex = ref<number | null>(null)
 const selectedCard = computed((): Card | null => {
   // If no card is selected, return null (no card data to show)
   if (selectedCardIndex.value === null) return null
-  
+
   // Otherwise, get the full card data using the selected index
   // This will return an object with name, message, crystal_suggestion, etc.
   return getCard(selectedCardIndex.value)
@@ -239,13 +239,13 @@ const selectedCard = computed((): Card | null => {
 /**
  * getRandomCardIndex - Selects a random tarot card that hasn't been selected yet
  * @returns The index of a randomly selected card (0-77), or null if no cards available
- * 
+ *
  * This function:
  * 1. Creates a list of all possible card indexes (0-77)
  * 2. Removes any cards that have already been selected (from props.cardIdArrayToExclude)
  * 3. Picks a random card from the remaining available cards
  * 4. Returns the selected card's index
- * 
+ *
  * This ensures no duplicate cards are selected across all three card slots.
  */
 const getRandomCardIndex = (): number | null => {
@@ -271,7 +271,7 @@ const getRandomCardIndex = (): number | null => {
   // Math.random() gives us 0 to 0.999...
   // Math.floor() rounds down to get an integer
   const randomIndex = Math.floor(Math.random() * availableCards.length)
-  
+
   // Get the actual card index from our available cards array
   // This is the real card index (0-77) that we'll use
   const selectedIndex = availableCards[randomIndex]
@@ -282,19 +282,19 @@ const getRandomCardIndex = (): number | null => {
     console.error('Failed to select a random card')
     return null
   }
-  
+
   return selectedIndex
 }
 
 /**
  * handleCardClick - Handles when the user clicks on a card to reveal it
- * 
+ *
  * This function:
  * 1. Checks if the card is already revealed (prevents double-clicks)
  * 2. Gets a random card that hasn't been selected yet
  * 3. Updates the component state to show the selected card
  * 4. Notifies the parent component about the selection
- * 
+ *
  * This is the main interaction function that makes the tarot reading work!
  */
 const handleCardClick = () => {

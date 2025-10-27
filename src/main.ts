@@ -5,13 +5,19 @@
  * This is the "starting point" of our Vue.js tarot application.
  * Think of it as the "main function" that gets everything up and running.
  *
- * What happens here:
- * 1. We create a new Vue application instance
- * 2. We set up all the plugins and tools we need (Pinia for state management, Vue Router for navigation)
- * 3. We import our main App component
- * 4. We "mount" the app to the HTML page (attach it to a div with id="app")
+ * What is an entry point?
+ * An entry point is the first file that runs when your application starts.
+ * It's like the "front door" of your app - everything begins here.
+ *
+ * What happens here (step by step):
+ * 1. We import all the tools and libraries we need
+ * 2. We create a new Vue application instance
+ * 3. We set up all the plugins and tools (Pinia for state management, Vue Router for navigation)
+ * 4. We import our main App component (the root of our component tree)
+ * 5. We "mount" the app to the HTML page (attach it to a div with id="app")
  *
  * This file runs when the user first loads our website!
+ * It's like the "bootstrap" process that gets everything ready to go.
  */
 
 // VUE CORE IMPORTS
@@ -77,4 +83,18 @@ app.use(router)
 // You can find this div in the index.html file
 app.mount('#app')
 
-// That's it! Our Vue app is now running and ready to show tarot cards to users! 🎉
+// 🎉 SUCCESS! Our Vue app is now running and ready to show tarot cards to users!
+//
+// What just happened?
+// - Vue created our application instance
+// - All plugins were registered and configured
+// - Our App component was mounted to the DOM
+// - The app is now "live" and will respond to user interactions
+//
+// From this point forward, Vue will:
+// - Watch for changes in our component data
+// - Automatically update the DOM when data changes
+// - Handle user interactions (clicks, form inputs, etc.)
+// - Manage the component lifecycle
+//
+// The tarot card reading experience is now ready for users! 🔮✨

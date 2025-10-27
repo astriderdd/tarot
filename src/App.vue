@@ -72,7 +72,7 @@ import CardPicker from '@/components/CardPicker.vue'
 // ===============
 // This component is intentionally simple - it just imports and displays CardPicker.
 // The CardPicker component does all the heavy lifting for the card selection.
-// 
+//
 // In a more complex app, this is where we might also:
 // - Set up global state management (like Pinia stores)
 // - Handle routing and navigation

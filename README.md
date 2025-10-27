@@ -87,12 +87,6 @@ src/
 For the best development experience, use:
 
 - [VS Code](https://code.visualstudio.com/)
-- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-### Browser DevTools
-
-- **Chrome/Edge**: Install [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- **Firefox**: Install [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
 
 ## 🌟 Features
 
